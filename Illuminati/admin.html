@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo" title="University Management System">
+            <img src="./images/logo.png" alt="">
+            <h2>IT<span class="danger">Illmina</span>ti</h2>
+        </div>
+        <div class="navbar">
+            <a href="index.html" class="active">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="time.html" onclick="timeTableAll()">
+                <span class="material-icons-sharp">today</span>
+                <h3>Time Table</h3>
+            </a> 
+            <a href="exam.html">
+                <span class="material-icons-sharp">grid_view</span>
+                <h3>Examination</h3>
+            </a>
+            <a href="pwd.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp" onclick="">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        
+    </header>
+    <div class="container">
+        <aside>
+            <div class="profile">
+                <div class="top">
+                    <div class="profile-photo">
+                        <img src="" alt="">
+                    </div>
+                    <div class="info">
+                        <p>Hey, <b>AwkwardPy</b> </p>
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+                <div class="about">
+                    <h5>dgdfgdfg</h5>
+                    <p></p>
+                    <h5></h5>
+                    <p></p>
+                    <h5></h5>
+                    <p></p>
+                    <h5></h5>
+                    <p></p>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Attendance</h1>
+            <div class="subjects">
+                <div class="eg">
+                    <span class="material-icons-sharp"></span>
+                    <h3>dfgdfgd</h3>
+                    <h2>dfgfdgd</h2>
+                    <div class="progress">
+                        <svg><circle cx="33" cy="33" r="33"></circle>45</svg>
+                        <div class="number">34<p>34</p>56</div>
+                    </div>
+                    <small class="text-muted">dfgdfgd</small>
+                </div>
+                <div class="mth">
+                    <span class="material-icons-sharp"></span>
+                    <h3></h3>
+                    <h2></h2>
+                    <div class="progress">
+                        <svg><circle cx="" cy="" r=""></circle></svg>
+                        <div class="number"><p></p></div>
+                    </div>
+                    <small class="text-muted"></small>
+                    </div>
+                    <small class="text-muted"></small>
+                </div>
+                <div class="cs">
+                    <span class="material-icons-sharp"></span>
+                    <h3></h3>
+                    <h2></h2>
+                    <div class="progress">
+                        <svg><circle cx="" cy="" r=""></circle></svg>
+                        <div class="number"><p></p></div>
+                    </div>
+                    <small class="text-muted"></small>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="cg">
+                    <span class="material-icons-sharp"></span>
+                    <h3></h3>
+                    <h2></h2>
+                    <div class="progress">
+                        <svg><circle cx="" cy="" r=""></circle></svg>
+                        <div class="number"><p></p></div>
+                    </div>
+                    <small class="text-muted"></small>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="net">
+                    <span class="material-icons-sharp"></span>
+                    <h3></h3>
+                    <h2></h2>
+                    <div class="progress">
+                        <svg><circle cx="" cy="" r=""></circle></svg>
+                        <div class="number"><p></p></div>
+                    </div>
+                    <small class="text-muted"></small>
+                </div>
+            </div>
+
+            <div class="timetable" id="timetable">
+                <div>
+                    <span id="prevDay">&lt;</span>
+                    <h2></h2>
+                    <span id="nextDay">&gt;</span>
+                </div>
+                <span class="closeBtn" onclick="timeTableAll()"></span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="announcements">
+                <h2></h2>
+                <div class="updates">
+                    <div class="message">
+                        <s> <b></b></s>
+                        <small class="text-muted"></small>
+                    </div>
+                    <div class="message">
+                        <p> <b></b> </p>
+                        <small class="text-muted"></small>
+                    </div>
+                    <div class="message">
+                        <p> <b></b> </p>
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaves">
+                <h2></h2>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-2.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3></h3>
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-3.jpg" alt=""></div>
+                    <div class="info">
+                        <h3></h3>
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-4.jpg" alt=""></div>
+                    <div class="info">
+                        <h3></h3>
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./assets/js/time.js"></script>
+    <script src="./assets/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0" />
+		<meta name="description" content="A conversational AI system that listens, learns, and challenges" />
+		<meta property="og:title" content="ChatGPT" />
+		<meta property="og:image" content="https://openai.com/content/images/2022/11/ChatGPT.jpg" />
+		<meta
+			property="og:description"
+			content="A conversational solveX system that listens, learns, and challenges" />
+		<meta property="og:url" content="https://chat.acy.dev" />
+		<link rel="stylesheet" href="/Illuminati/solveX/client/css/style.css" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/Illuminati/solveX/client/img/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/Illuminati/solveX/client/img/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/Illuminati/assets/Images/favicon-16x16.png" />
+		<link rel="manifest" href="/Illuminati/solveX/client/img/site.webmanifest" />
+		<link
+			rel="stylesheet"
+			href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/base16/dracula.min.css" />
+		<title>solveX</title>
+	</head>
+
+	<body data-urlprefix="url_prefix">
+		<div class="main-container">
+			<div class="box sidebar">
+				<div class="top">
+					<button class="button" onclick="new_conversation()">
+						<i class="fa-regular fa-plus"></i>
+						<span>New Conversation</span>
+					</button>
+					<div class="spinner"></div>
+				</div>
+				<div class="sidebar-footer">
+					<button class="button" onclick="delete_conversations()">
+						<i class="fa-regular fa-trash"></i>
+						<span>Clear Conversations</span>
+					</button>
+					<div class="settings-container">
+						<div class="checkbox field">
+							<span>Dark Mode</span>
+							<input type="checkbox" id="theme-toggler" />
+							<label for="theme-toggler"></label>
+						</div>
+						<div class="field">
+							<span>Language</span>
+							<!-- <select
+								class="dropdown"
+								id="language"
+								onchange="changeLanguage(this.value)"></select> -->
+						</div>
+					</div>
+					<a class="info" href="https://github.com/ramonvc/gptfree-jailbreak-webui" target="_blank">
+						<i class="fa-brands fa-github"></i>
+						<span class="conversation-title">Version: 0.4.0</span>
+					</a>
+				</div>
+			</div>
+			<div class="conversation">
+				<div class="stop-generating stop-generating-hidden">
+					<button class="button" id="cancelButton">
+						<span>Stop Generating</span>
+					</button>
+				</div>
+				<div class="box" id="messages"></div>
+				<div class="user-input">
+					<div class="box input-box">
+						<textarea
+							id="message-input"
+							placeholder="Ask anything to solveX"
+							cols="30"
+							rows="10"
+							style="white-space: pre-wrap"></textarea>
+						<div id="send-button">
+							<i class="fa-regular fa-paper-plane-top"></i>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="options-container">
+						<div class="buttons">
+							<div class="field">
+								<select class="dropdown" name="model" id="model">
+									<option value="gpt-3.5-turbo">solveX-1.2</option>
+									<option value="gpt-3.5-turbo-16k">solveX-3.1</option>
+									<option value="gpt-4" selected>solveX-4</option>
+								</select>
+							</div>
+							<!-- <div class="field">
+								<select class="dropdown" name="jailbreak" id="jailbreak">
+									<option value="default" selected>Default</option>
+									<option value="gpt-dan-11.0">DAN</option>
+									<option value="gpt-evil">Evil</option>
+								</select>
+							</div> -->
+						</div>
+						<div class="field checkbox">
+							<input type="checkbox" id="switch" />
+							<label for="switch"></label>
+							<span>Web Access</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-button">
+			<i class="fa-solid fa-bars"></i>
+		</div>
+
+		<!-- scripts -->
+		<script>
+			window.conversation_id = "chat_id";
+		</script>
+		<script src="/Illuminati/solveX/client/js/icons.js"></script>
+		<script src="/Illuminati/solveX/client/js/chat.js" defer></script>
+		<script src="/Illuminati/solveX/client/js/markdown-it.min.js"></script>
+		<script src="/Illuminati/solveX/client/js/highlight.min.js"></script>
+		<script src="/Illuminati/solveX/client/js/highlightjs-copy.min.js"></script>
+		<script src="/Illuminati/solveX/client/js/theme-toggler.js"></script>
+		<script src="/Illuminati/solveX/client/js/sidebar-toggler.js"></script>
+		<script src="/Illuminati/solveX/client/js/change-language.js"></script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .chat-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .user-message {
+            text-align: right;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .bot-message {
+            text-align: left;
+            margin-bottom: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container" id="chat-container">
+        <div class="bot-message">Hello! How can I assist you today?</div>
+    </div>
+    <div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById("chat-container");
+        const userInput = document.getElementById("user-input");
+
+        function sendMessage() {
+            const userMessage = userInput.value;
+            if (userMessage.trim() !== "") {
+                addMessage("user", userMessage);
+                processUserMessage(userMessage);
+                userInput.value = "";
+            }
+        }
+
+        function addMessage(sender, message) {
+            const messageElement = document.createElement("div");
+            messageElement.classList.add(`${sender}-message`);
+            messageElement.textContent = message;
+            chatContainer.appendChild(messageElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function processUserMessage(userMessage) {
+            // Implement logic here to generate bot responses based on user input
+            // You can use if-else statements or switch cases for simple rule-based responses
+            const botResponse = generateBotResponse(userMessage);
+            addMessage("bot", botResponse);
+        }
+
+        function generateBotResponse(userMessage) {
+            // Replace this with your logic to generate bot responses
+            // Example rule-based responses:
+            if (userMessage.toLowerCase().includes("hello")) {
+                return "Hello! How can I assist you today?";
+            } else if (userMessage.toLowerCase().includes("help")) {
+                return "Sure, I can help. What do you need assistance with?";
+            } else {
+                return "I'm sorry, I don't understand. Please try asking another question.";
+            }
+        }
+    </script>
+</body>
+</html>
