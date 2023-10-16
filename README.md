@@ -1,4 +1,5 @@
-# IT-Illuminati
+# IT-Illuminati 
+
 
 **Join Us in Shaping the Future of IT-Illuminati!**
 
@@ -41,10 +42,8 @@ Are you ready to embark on an exciting journey of coding and collaboration? Foll
    - **Option 2: Clone Repository (Recommended)**: If you're familiar with Git, you can clone the repository to your machine. Open your terminal and run the following command:
 
      ```
-     git clone [repository URL]
+     git clone https://github.com/awkwardpy/Illuminati-2.O.git
      ```
-
-     Replace `[repository URL]` with the URL of your project's repository.
 
 **Step 4: Set Up Your Development Environment**
 
